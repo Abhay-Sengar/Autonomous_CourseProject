@@ -1,0 +1,8 @@
+prefix=/home/rohit/catkin_ws/devel
+
+Name: begin
+Description: Description of begin
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

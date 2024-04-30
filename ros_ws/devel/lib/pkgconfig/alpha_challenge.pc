@@ -1,0 +1,8 @@
+prefix=/home/rohit/catkin_ws/devel
+
+Name: alpha_challenge
+Description: Description of alpha_challenge
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

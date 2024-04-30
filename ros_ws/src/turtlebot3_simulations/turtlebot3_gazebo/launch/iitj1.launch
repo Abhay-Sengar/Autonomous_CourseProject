@@ -1,0 +1,26 @@
+<launch>
+ <!-- Define arguments for the robot model and position -->
+ <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+ <arg name="x_pos" default="3442.0"/>
+ <arg name="y_pos" default="4577.0"/>
+ <arg name="z_pos" default="0.00005"/>
+
+ <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/iitj.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+ <!-- Load the robot description parameter -->
+ <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+
+ <!-- Launch the robot state publisher to publish the robot's state information -->
+ <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+ <!-- Launch RViz -->
+ <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_description)/rviz/turtlebot3_$(arg model).rviz" />
+</launch>
+
