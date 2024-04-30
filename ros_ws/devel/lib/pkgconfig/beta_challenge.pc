@@ -1,0 +1,8 @@
+prefix=/home/rohit/catkin_ws/devel
+
+Name: beta_challenge
+Description: Description of beta_challenge
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
