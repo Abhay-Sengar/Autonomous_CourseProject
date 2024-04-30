@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="beta_challenge" type="square.py" name="move_robot" output="screen"/>
+    
+</launch>

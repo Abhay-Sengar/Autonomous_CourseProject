@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="maze_solver" type="scan.py" name="rotw5_node" output="screen">
+    
+    </node>
+</launch>

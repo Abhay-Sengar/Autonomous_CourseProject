@@ -1,0 +1,5 @@
+<launch>
+	<node pkg = "maze_solver" type="test.py" name="revised_scan" output="screen">
+	
+	</node>
+</launch>
